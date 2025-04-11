@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default function Topbar() {
     return (
-        <div className="bg-red-500 text-white p-4 flex justify-between items-center">
+        <div className="bg-[#e60012] text-white p-4 flex justify-between items-center">
             <div className="text-lg font-bold">
                 <img src="/nintendo.png" 
                     alt="Nintendo" 

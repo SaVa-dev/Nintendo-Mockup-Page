@@ -1,8 +1,6 @@
 import { useState } from 'react'
-
 import Topbar from './components/topbar.jsx'
-import ScrollHorizontal from './components/ScrollHorizontal.jsx'
-
+import HorizontalScroll from './components/ScrollHorizontal.jsx' // Changed import name to match component
 import ns2Desktop from './assets/ns2-desktop.avif'
 import ns2Mobile from './assets/ns2-mobile.avif'
 
@@ -34,6 +32,22 @@ function App() {
       title: "Pokémon Eclipse",
       description: "La nueva generación de Pokémon con una región completamente nueva.",
     },
+    {
+      image: ns2Desktop,
+      title: "Pokémon Eclipse",
+      description: "La nueva generación de Pokémon con una región completamente nueva.",
+    },
+    {
+      image: ns2Desktop,
+      title: "Pokémon Eclipse",
+      description: "La nueva generación de Pokémon con una región completamente nueva.",
+    },
+    {
+      image: ns2Desktop,
+      title: "Pokémon Eclipse",
+      description: "La nueva generación de Pokémon con una región completamente nueva.",
+    },
+
   ]
 
   return (
@@ -41,15 +55,15 @@ function App() {
       <Topbar />
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mt-10">Welcome to Nintendo</h1>
-
         {/* Imagen responsive */}
         <img src={ns2Desktop} alt="Nintendo Switch 2 Desktop" className="rounded-2xl hidden md:block w-full mt-10" />
         <img src={ns2Mobile} alt="Nintendo Switch 2 Mobile" className="rounded-2xl block md:hidden w-full mt-10" />
 
-        {/* Cartas con espacio superior */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Pasamos el arreglo de noticias a HorizontalScroll */}
-          <ScrollHorizontal noticias={noticias} />
+        <p className="mt-10 font-bold text-2xl"> Descubre las nuevas capacidades del Nintendo Switch 2</p>
+        
+        {/* Moved outside the grid for proper horizontal scroll */}
+        <div className="mt-10">
+          <HorizontalScroll noticias={noticias} />
         </div>
       </div>
     </div>
